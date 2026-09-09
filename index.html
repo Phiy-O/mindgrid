@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindGrid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sound Controls -->
+  <div class="sound-controls">
+    <button id="sound-toggle" class="sound-btn" title="Toggle Sound">🔊</button>
+    <div id="volume-slider-wrap" class="volume-slider-wrap">
+      <input id="volume-slider" type="range" min="0" max="100" value="50" class="volume-slider">
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgm" src="assets/berrydeep-press-start-562382.mp3" loop preload="auto"></audio>
+
+  <!-- START SCREEN -->
+  <div id="screen-start" class="screen active">
+    <div class="start-content">
+      <h1 class="title">MINDGRID</h1>
+      <p class="subtitle">How good is your memory?</p>
+      <p class="description">Remember the pattern. Recreate it.</p>
+      <button id="btn-play" class="btn-play">PLAY</button>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN SCREEN -->
+  <div id="screen-countdown" class="screen">
+    <div class="countdown-content">
+      <div id="countdown-number" class="countdown-number">3</div>
+      <div id="countdown-message" class="countdown-message"></div>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="screen-game" class="screen">
+    <div class="game-header">
+      <div id="game-timer" class="game-timer">3.0</div>
+      <div id="game-phase-label" class="game-phase-label">REMEMBER! 👀</div>
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="game-footer" class="game-footer">
+      <div id="selection-counter" class="selection-counter"></div>
+    </div>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div id="screen-result" class="screen">
+    <div class="result-content">
+      <div id="result-icon" class="result-icon"></div>
+      <div id="result-title" class="result-title"></div>
+      <div id="result-score" class="result-score"></div>
+      <div id="result-subtitle" class="result-subtitle"></div>
+      <div id="result-prize" class="result-prize"></div>
+      <div class="result-buttons">
+        <button id="btn-replay" class="btn-play">PLAY AGAIN</button>
+        <button id="btn-exit" class="btn-exit">FINISH</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
